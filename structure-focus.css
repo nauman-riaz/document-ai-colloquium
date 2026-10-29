@@ -1,0 +1,36 @@
+/* The synthesis chapter gives DocDjinn four clear beats and DocScribe two slides. */
+.djinn-breadth .breadth-setup{position:absolute;left:90px;right:90px;top:267px;font-size:21px;color:var(--muted)}
+.breadth-panels{position:absolute;left:90px;right:90px;top:315px;display:grid;grid-template-columns:repeat(3,1fr);gap:65px}
+.breadth-panel{border-top:1px solid var(--rule);padding-top:15px}
+.breadth-task{font-size:16px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.reveal .breadth-panel h3{font-family:ColloquiumSerif;font-size:34px;line-height:1.1;margin:9px 0 7px}
+.breadth-model{font-size:18px;line-height:1.2;color:var(--muted)}
+.breadth-panel svg{width:100%;height:220px;margin-top:12px}
+.breadth-label,.breadth-value,.breadth-tick{font-family:ColloquiumSans;fill:var(--ink);font-size:22px}
+.breadth-value{font-size:25px}.breadth-tick{fill:var(--muted);font-size:16px}
+.breadth-track{stroke:#dbe0d5;stroke-width:8}.breadth-bar{stroke:#9eafa2;stroke-width:8}
+.breadth-augmented .breadth-bar{stroke:var(--teal)}.breadth-augmented .breadth-value{fill:var(--teal)}
+.breadth-full .breadth-bar{stroke:#d7b99c}
+.breadth-augmented,.breadth-full{transition:opacity .4s}
+.djinn-breadth[data-step="0"] .breadth-augmented,.djinn-breadth:is([data-step="0"],[data-step="1"]) .breadth-full{opacity:0}
+.reveal .breadth-delta{font-family:ColloquiumSerif;font-size:38px;line-height:1.1;color:var(--teal);margin-top:5px}
+.breadth-delta.decline{color:var(--accent)}.breadth-delta span{font-family:ColloquiumSans;font-size:15px;color:var(--muted);margin-left:14px}
+.reveal .breadth-contribution{position:absolute;left:90px;right:90px;top:718px;border-top:1px solid var(--rule);padding-top:15px;display:flex;justify-content:space-between;gap:30px;font-size:23px;line-height:1.2;color:var(--teal)}
+.breadth-contribution span{color:var(--muted)}
+/* Keep the training connection above the existing same-scale visual comparison. */
+.scribe-training-summary{position:absolute;left:90px;right:90px;top:290px;border-top:1px solid var(--rule);padding-top:12px;display:flex;align-items:center;gap:26px;font-size:21px;line-height:1.2}
+.scribe-training-summary>span{font-size:16px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.scribe-training-summary strong{font-weight:400}.scribe-training-summary i{font-style:normal;color:var(--teal)}
+.paper-slide.scribe-compact-task .templating-task{top:344px;border-top:0;padding-top:0;font-size:24px}
+.paper-slide.scribe-compact-task .reconstruction-pair{top:402px}
+.paper-slide.scribe-compact-task .reconstruction-window{height:270px}
+.paper-slide.scribe-compact-task .comparison-caption{top:725px;font-size:16px;line-height:1.3}
+.scribe-compact-evidence .scribe-metric-panel:not(.scribe-contribution)>.metric-axis{font-size:25px;line-height:1.2;letter-spacing:0;text-transform:none}
+.scribe-compact-evidence .scribe-metric-panel svg{height:260px}
+.scribe-contribution h3{font-size:34px!important;line-height:1.1;margin-top:12px}
+.reveal .scribe-contribution>p:not(.metric-axis){font-size:22px;line-height:1.4;margin-top:18px}
+.reveal .scribe-contribution .scribe-handwriting-summary{font-size:19px;line-height:1.45;margin-top:22px;color:var(--muted)}
+.scribe-handwriting-summary strong{font-weight:400;color:var(--ink)}.scribe-handwriting-summary span{font-size:16px}
+.reveal .scribe-contribution .scribe-integrity-link{font-family:ColloquiumSerif;font-size:31px;line-height:1.15;margin-top:27px}
+@media(prefers-reduced-motion:reduce){.breadth-augmented,.breadth-full{transition:none}}
+@media print{.breadth-augmented,.breadth-full{opacity:1!important}}

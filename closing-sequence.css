@@ -1,0 +1,54 @@
+/* The opening form returns inside the existing closing map, then joins the finale. */
+.reveal .slides #research-question h2{font-size:80px;line-height:1.04}
+.reveal .slides #research-question .closing-map{position:absolute;left:90px;top:300px;width:1420px;height:460px;margin:0;transform:none}
+.closing-map .progress-link-label{display:none}
+.closing-map .closing-future{opacity:.5}
+.closing-future path{fill:none;stroke:currentColor;stroke-width:2;stroke-dasharray:8 6}
+.closing-future circle{fill:var(--dark);stroke:currentColor;stroke-width:2}
+.closing-future text{fill:currentColor;font:24px ColloquiumSans}
+.closing-future .closing-future-status{font-size:18px}
+.closing-future-generation{color:var(--map-synthesis)}
+.closing-future-forensics{color:var(--map-forensics)}
+#research-question[data-step="3"] .map-dot{filter:drop-shadow(0 0 8px currentColor)}
+.reveal .closing-document{position:absolute;left:0;top:0;width:490px;margin:0;transform-origin:0 0;opacity:0}
+.closing-document-page{position:relative;box-shadow:0 18px 70px #071d1a70}
+.reveal .closing-document img{display:block;width:100%;height:auto}
+.closing-document svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.closing-document svg rect{fill:none;vector-effect:non-scaling-stroke;stroke-width:3}
+.closing-structure-regions{stroke:var(--map-synthesis)}
+.closing-integrity-region{stroke:var(--map-forensics);fill:#f5aa8e15!important}
+.reveal .closing-document figcaption{font-size:18px;color:var(--muted);text-align:center;margin-top:20px;white-space:nowrap}
+.closing-stream-copy{position:absolute;top:430px;width:380px;opacity:0}
+.closing-structure-copy{left:90px;color:var(--map-synthesis)}
+.closing-integrity-copy{left:1100px;color:var(--map-forensics)}
+.closing-stream-copy>span{font-size:16px;letter-spacing:1.4px}
+.reveal .closing-stream-copy p{font:38px/1.25 ColloquiumSerif;margin-top:20px}
+.reveal .closing-stream-copy small{display:block;font-size:22px;line-height:1.4;color:var(--muted);margin-top:24px;max-width:340px}
+.reveal .slides #research-question .closing-summary{bottom:83px;opacity:0;font-size:28px}
+.closing-step{position:absolute;width:1px;height:1px;pointer-events:none}
+/* The final thought lands first; questions and slide numbers follow on advance. */
+.journey-mode .journey-final-copy{top:310px;width:645px}
+.reveal .journey-final-copy h2{font-size:44px;line-height:1.13;letter-spacing:-.025em}
+.reveal .journey-final-copy .journey-thanks{position:absolute;left:-560px;top:30px;width:400px;font-size:84px;line-height:1.05;letter-spacing:-.035em;color:#f3ecdf;margin:0}
+.reveal .journey-final-copy .journey-thanks span{display:block;margin:18px 0 0;font-size:23px;line-height:1.3;letter-spacing:.01em;color:#d9c9ad}
+.journey-finale:not(.journey-index) #journey-numbers{visibility:hidden}
+.journey-finale.journey-formed:not(.journey-index) #journey-preview{opacity:0}
+.journey-finale.journey-formed:not(.journey-index) #journey-numbers a{pointer-events:none}
+.journey-anchor{pointer-events:none}
+.journey-future-path{fill:none;stroke-width:2;stroke-dasharray:8 7}
+.journey-future-label{font:16px ColloquiumSans}
+.journey-future-upper{stroke:var(--map-synthesis);fill:var(--map-synthesis)}
+.journey-future-lower{stroke:var(--map-forensics);fill:var(--map-forensics)}
+path.journey-future-upper,path.journey-future-lower{fill:none}
+body:not(.journey-mode) #thank-you:not([data-step="1"]) .finale-index{visibility:hidden}
+@media(prefers-reduced-motion:reduce){#research-question *,#thank-you *{transition:none!important;animation:none!important}}
+@media print{.reveal .closing-document{transform:translate(985px,446.8px) scale(.183673)!important;opacity:1!important}.closing-map,.closing-summary{opacity:1!important}.closing-stream-copy,.closing-document figcaption{display:none}.finale-index{visibility:visible!important}}
+
+.journey-future-extensions{opacity:0}
+text.journey-future-upper,text.journey-future-lower{stroke:none}
+
+.closing-future-generation circle:first-of-type{fill:var(--map-synthesis)}
+
+/* Warm closing accent; distinct from both research-stream colours. */
+.reveal .journey-final-copy .journey-thanks em{color:#e3be87;text-shadow:0 0 28px #e3be8726}
+.journey-thanks::before{content:"";position:absolute;left:0;top:-24px;width:100px;height:2px;background:linear-gradient(90deg,#e3be87,#e3be8700)}

@@ -1,0 +1,41 @@
+/* Green is reserved for maps and the ending. Branch colour identifies the stream. */
+:root{--map-synthesis:#71ddc5;--map-forensics:#f5aa8e}
+.reveal .research-checkpoint{--ink:#f3f0e8;--muted:#bed0c6;--teal:var(--map-synthesis);--accent:var(--map-forensics);--rule:#54716a;color:var(--ink)}
+.reveal .research-checkpoint .eyebrow{color:var(--muted)}
+.research-checkpoint .map-title{font-size:45px}
+.research-checkpoint .map-desc{font-size:25px;fill:var(--muted)}
+.research-checkpoint .map-foundation-label{font:18px ColloquiumSans;letter-spacing:1.8px;fill:var(--muted)}
+.research-checkpoint .progress-foundation .map-title{font-size:40px;fill:var(--paper)}
+.research-checkpoint .progress-foundation .map-link{stroke:var(--paper);stroke-width:2.5;opacity:1}
+.research-checkpoint .map-foundation-dot{fill:var(--paper)}
+.research-checkpoint .map-lane-label{font-size:20px;letter-spacing:1.5px}
+.research-checkpoint .progress-synthesis{color:var(--map-synthesis)}
+.research-checkpoint .progress-integrity{color:var(--map-forensics)}
+.research-checkpoint :is(.progress-synthesis,.progress-integrity) :is(.map-title,.map-lane-label,.progress-link-label){fill:currentColor}
+.research-checkpoint :is(.progress-synthesis,.progress-integrity) .map-link{stroke:currentColor;stroke-width:2.5;opacity:1;stroke-linecap:round;transition:stroke-width .35s}
+.research-checkpoint .map-dot{fill:currentColor;stroke:currentColor;stroke-width:2;r:7px;transition:r .35s}
+/* Introduce each stream from shadow; introduced branches stay visible. */
+.reveal #research-map :is(.progress-synthesis,.progress-integrity){opacity:.12;transition:opacity .65s ease}
+.reveal #research-map:is([data-step="1"],[data-step="2"]) .progress-synthesis,.reveal #research-map[data-step="2"] .progress-integrity{opacity:1}
+#research-map:is([data-step="1"],[data-step="2"]) .progress-synthesis .map-dot{filter:drop-shadow(0 0 6px #71ddc570)}
+#research-map[data-step="2"] .progress-integrity .map-dot{filter:drop-shadow(0 0 6px #f5aa8e70)}
+.research-checkpoint .progress-link-label{opacity:0;font-size:18px;transition:opacity .3s}
+#research-map[data-step="1"] .progress-synthesis .map-link,#research-map[data-step="2"] .progress-integrity .map-link{stroke-width:4.5}
+#research-map[data-step="1"] .progress-synthesis .map-dot,#research-map[data-step="2"] .progress-integrity .map-dot{r:10px}
+#research-map[data-step="1"] .progress-synthesis .progress-link-label,#research-map[data-step="2"] .progress-integrity .progress-link-label{opacity:1}
+.reveal #research-map.research-checkpoint .bottom-note{bottom:95px;color:var(--muted)}
+/* Preserve the two stream identities on the closing research path. */
+.dark-slide .journey-synthesis{stroke:var(--map-synthesis)}
+.dark-slide .journey-integrity{stroke:var(--map-forensics)}
+.journey-upper{fill:var(--map-synthesis)}
+.journey-lower{fill:var(--map-forensics)}
+.journey-description{fill:#bed0c6}
+/* Scientific summaries stay light and use their stream's accent. */
+.reveal .jpeg-synthesis .jpeg-probe-comparison>div,.reveal .jpeg-synthesis .jpeg-probe-limits{border-color:var(--rule)}
+.reveal .jpeg-synthesis .gaf-kicker,.reveal .jpeg-synthesis .jpeg-failure{color:var(--accent)}
+.reveal .jpeg-synthesis .jpeg-probe-comparison p:not(.jpeg-failure),.reveal .jpeg-synthesis .jpeg-probe-limits p{color:var(--muted)}
+.reveal .jpeg-synthesis .jpeg-probe-limits strong{color:var(--ink)}
+.reveal #interpretation .paper-citation{bottom:90px}
+.reveal #interpretation .source-line{bottom:138px}
+@media(prefers-reduced-motion:reduce){.research-checkpoint :is(.map-link,.map-dot,.progress-link-label),.reveal #research-map :is(.progress-synthesis,.progress-integrity){transition:none!important}}
+@media print{.research-checkpoint{background:#173936!important;print-color-adjust:exact}.reveal #research-map :is(.progress-synthesis,.progress-integrity){opacity:1!important}}

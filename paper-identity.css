@@ -1,0 +1,115 @@
+/* A consistent paper identity, with separate space for the scientific explanation. */
+.reveal .slides > section.paper-slide{padding-top:258px}
+.reveal .paper-slide > h2{position:absolute;left:90px;right:90px;top:119px;font-size:60px;line-height:1.03;margin:0;letter-spacing:-.025em}
+.paper-identity{position:absolute;left:90px;right:90px;top:45px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:52px}
+.paper-identity>div{display:flex;align-items:center;gap:28px;min-width:0}
+.reveal .paper-name{font-family:ColloquiumSans,sans-serif;font-weight:700;font-size:43px;line-height:1.15;letter-spacing:-.035em;color:var(--teal);white-space:nowrap}
+.paper-purpose{font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--rule);padding-left:26px;line-height:1.35;white-space:nowrap}
+.paper-venue{flex-shrink:0;display:flex;align-items:center;gap:16px;border:1px solid var(--teal);padding:10px 17px;color:var(--teal);font-weight:700;font-size:25px;line-height:1.1;text-decoration:none;background:#23786c07}
+.paper-venue small{font-size:15px;font-weight:400;border-left:1px solid currentColor;padding-left:15px}
+.reveal .paper-full-title{position:absolute;left:90px;right:90px;top:250px;font-size:20px;line-height:1.3;color:var(--muted);max-width:1420px}
+/* A citation stays visible. Figure caveats occupy their own line above it. */
+.reveal .paper-citation{position:absolute;left:90px;right:90px;bottom:63px;min-height:34px;border-top:1px solid var(--rule);padding-top:10px;display:flex;align-items:baseline;justify-content:space-between;gap:22px;font-size:21px;line-height:1.15;color:var(--muted)}
+.paper-citation strong{color:var(--ink)}.paper-citation sup{font-size:.65em;vertical-align:super}.paper-citation a{color:var(--teal);text-decoration:none;white-space:nowrap}.paper-citation a:hover,.paper-venue:hover{text-decoration:underline;text-underline-offset:4px}.citation-work{color:var(--ink)}.equal-credit{font-size:16px;margin-left:22px}
+.paper-slide .citation-work{display:none}
+.reveal .cited-slide .source-line,.reveal .motivation .source-line,.reveal .structure-integrity-bridge .source-line,.reveal .forgery-types .source-line{bottom:108px;font-size:16px;line-height:1.3}
+.reveal .paper-citation-multi{gap:16px;font-size:19px}.paper-citation-multi a{display:flex;gap:8px;align-items:baseline}.paper-citation-multi a>span{font-size:14px;color:var(--muted)}
+.reveal .paper-slide[data-paper="forge"] .paper-name,.reveal .paper-slide[data-paper="jpeg"] .paper-name{color:var(--accent)}
+.paper-slide[data-paper="forge"] .paper-venue,.paper-slide[data-paper="jpeg"] .paper-venue{color:var(--accent);border-color:var(--accent);background:#b95d4307}
+.reveal .interpretation .paper-name,.interpretation .paper-venue{color:#d9b594!important}.interpretation .paper-purpose,.interpretation .paper-citation{color:#a1bdb2}.interpretation .paper-venue{border-color:#729187!important;background:transparent!important}.interpretation .paper-citation{border-color:#54716a}.interpretation .paper-citation strong,.interpretation .citation-work{color:var(--paper)}.interpretation .paper-citation a{color:#d9b594}
+/* Forensic narrative accents follow the chapter. Keep --teal unchanged: RGB
+   branches, gains, paired controls, and scientific annotation colors carry meaning. */
+.reveal :is(.forensic-intro,[data-paper="forge"],[data-paper="jpeg"]):not(.interpretation)
+  :is(h2 em,.eyebrow,.paper-citation a,.source-line a,.gaf-evidence-reading em,
+      .operation-list li>span,.grid-figure .state-caption,.prediction-row figcaption span,
+      .forge-results-takeaway>p:last-child){color:var(--accent)}
+#references-dialog :is(#reference-forge,#reference-jpeg) :is(.reference-top h3,.reference-top>span),
+#references-dialog :is(#reference-forge,#reference-jpeg)>a{color:var(--accent)}
+/* The progress indicator follows the active light forensic slide. Dark summary
+   scenes retain their existing high-contrast warm accent. */
+body:has(.reveal .slides>section.present:is(.forensic-intro,[data-paper="forge"],[data-paper="jpeg"]):not(.interpretation))
+  .reading-progress span{background:var(--accent)}
+/* General narrative slides keep their layout without publication labels. */
+/* Reserve clear space below the two-line heading, including italic descenders. */
+.motivation .document-scene{top:310px;height:430px}
+#motivation-document .reveal-stage-caption{top:700px}#motivation-document[data-step="2"] .reveal-stage-caption{top:700px}
+.motivation .learning-stream{top:685px}.motivation .integrity-anchor{width:440px}
+.paper-slide .recap-dataset,.paper-slide .recap-model{top:310px}.paper-slide .recap-dataset img{max-height:300px;object-fit:contain;object-position:left top}.paper-slide .recap-outlook{top:714px}
+.paper-slide .stylus-model{height:475px;margin-top:25px}
+.paper-slide .stylus-conditions{margin-top:22px}.paper-slide .stylus-comparison{margin-top:24px}.paper-slide .stylus-comparison img{width:590px}.paper-slide .stylus-result{margin-top:24px;padding-top:18px}.paper-slide .stylus-result .cer-pair{font-size:56px}
+/* Synthesis: a roomy pipeline, distinct handwriting stages, and a clear result. */
+.paper-slide .djinn-pipeline-flow{top:316px}.paper-slide .funding-credit{top:721px;height:40px;padding-top:12px}
+.paper-slide .pipeline-page{width:260px}.paper-slide .djinn-stage .chapter-code{font-size:17px;line-height:1.4}.paper-slide .djinn-stage .diagram-caption{font-size:16px!important}
+.paper-slide .handwriting-layout{margin-top:22px}.paper-slide .word-segments{top:58px}.paper-slide .aligned-sentence{top:285px}.paper-slide .handwriting-process .insertion-caption{top:418px}
+.paper-slide .djinn-results-layout{margin-top:26px}.paper-slide #docvqa-chart{height:390px}.paper-slide #docvqa-chart>svg,.paper-slide #results-chart>svg{height:100%;width:100%}
+.reveal .paper-slide .bottom-note{bottom:154px}
+/* Reconstruction: data sizes and qualifications have dedicated rows. */
+.paper-slide .templating-task{top:292px}.paper-slide .reconstruction-pair{top:355px}.paper-slide .reconstruction-window{height:320px}.paper-slide .comparison-caption{top:735px}
+.paper-slide .scribe-training{top:280px}.paper-slide .training-scope{top:704px}.paper-slide .training-scope strong{font-size:34px}.paper-slide .training-scope{gap:70px;padding-top:13px}
+.paper-slide .scribe-metric-panels{top:280px}.paper-slide .scribe-model-key{top:735px}
+.paper-slide .transfer-domains{top:280px}.paper-slide .transfer-table{top:384px}.paper-slide .transfer-caveats{top:680px}
+.structure-integrity-bridge .bridge-document{top:310px;width:420px}.structure-integrity-bridge .bridge-questions{top:310px}
+/* Forensics: captions, training details, and comparisons each retain clear space. */
+.forgery-types .forgery-examples{top:310px}.forgery-types .forgery-boundary{top:728px}
+.paper-slide .forensic-pair,.paper-slide .forensic-context{top:280px}.paper-slide .forensic-image,.paper-slide .forensic-image img{width:400px;height:400px}.paper-slide .jpeg-scope{margin-top:20px}.paper-slide .forensic-cues{margin-top:17px}
+.paper-slide .forge-model-diagram{top:295px;height:410px}.paper-slide .forge-training{top:727px;padding-top:10px}.paper-slide .forge-training>span{font-size:15px}.paper-slide .forge-training strong{font-size:20px}
+.paper-slide .forge-evaluation-scope{top:280px}.paper-slide .forge-results-panels{top:350px}.paper-slide .forge-results-takeaway{top:714px;padding-top:13px;font-size:22px;line-height:1.3;gap:40px}
+.paper-slide .cue-source,.paper-slide .cue-detail,.paper-slide .cue-questions{top:310px}.paper-slide .cue-source svg{width:360px;height:360px}.paper-slide .cue-source{width:400px}.paper-slide .cue-source>p{font-size:17px}.paper-slide .cue-detail svg{height:320px}
+/* PRC: restore visual space and keep the prediction legend above the citation. */
+.paper-slide .mechanism-layout{margin-top:26px}.paper-slide .grid-diagram{width:400px;height:400px}.paper-slide .grid-figure figcaption{max-width:500px;font-size:17px}.paper-slide .operation-list{gap:18px}.paper-slide .method-boundary{margin-top:24px;font-size:20px}
+.paper-slide .prediction-row{margin-top:26px}.paper-slide .prediction-row img{width:370px;height:370px}.paper-slide .prediction-row figure p{font-size:19px;margin-top:12px}.paper-slide .prediction-legend{margin-top:10px;font-size:18px}
+.paper-slide #results-chart{height:420px}.paper-slide .results-layout{margin-top:30px}.paper-slide .results-insight .exception{margin-top:24px}
+/* Shared maps retain their discussion cues without publication strips. */
+#research-map .bottom-note,#research-question .bottom-note{bottom:135px}
+#research-map .research-map{height:420px}#research-question .closing-map{height:335px}
+/***** Full references: readable on demand, without adding a presentation step. *****/
+#references-dialog{width:min(940px,92vw);max-height:86vh;padding:32px 40px;overflow:auto}
+#references-dialog h2{margin:10px 0 22px;font-size:36px}
+#close-references{position:absolute;right:20px;top:12px;font-size:30px;border:0;background:none;color:var(--ink)}
+#references-dialog ol{list-style:none;padding:0;margin:0}
+#references-dialog li{padding:20px 0;border-top:1px solid var(--rule);font-size:16px;line-height:1.45}
+.reference-top{display:flex;align-items:baseline;justify-content:space-between;gap:20px}.reference-top h3{font-size:23px;margin:0;color:var(--teal)}.reference-top>span{font-weight:700;color:var(--teal);white-space:nowrap}
+.reference-title{font-size:18px;margin:10px 0}.reference-authors{margin:7px 0;color:var(--muted)}.reference-authors strong{color:var(--ink)}.reference-authors sup{font-size:.7em}.reference-equal,.reference-details{font-size:14px;margin:6px 0;color:var(--muted)}#references-dialog li>a{font-size:15px;color:var(--teal);display:inline-block;margin-top:5px;text-underline-offset:3px}
+@media(max-width:800px){#references-dialog{padding:26px}.reference-top{align-items:flex-start}.reference-top>span{font-size:13px}#references-dialog h2{font-size:29px}.presentation-bar .bar-location{max-width:115px}}
+@media print{.reveal .slides>section.paper-slide{padding-top:258px!important}.reveal .cited-slide .source-line,.reveal .motivation .source-line,.reveal .structure-integrity-bridge .source-line,.reveal .forgery-types .source-line{bottom:108px!important}.reveal .paper-slide .bottom-note{bottom:154px!important}.reveal .paper-citation{bottom:63px!important}.paper-slide .funding-credit{top:721px!important}#references-dialog{display:none!important}}
+
+/* Complete author credits occupy a stable band; the QR has its own right column. */
+.reveal .paper-citation{bottom:83px;height:82px;min-height:0;padding-top:8px;align-items:flex-start;font-size:18px;line-height:1.32;border-top:0}
+.paper-citation .citation-credit{position:absolute;bottom:0;display:block;width:calc(100% - 150px);border-top:1px solid var(--rule);padding-top:10px}
+.citation-authors{display:block}.author-name{white-space:nowrap}
+.paper-citation .equal-credit{display:block;font-size:15px;margin:4px 0 0}
+.paper-citation .paper-qr{position:absolute;right:0;bottom:0;width:116px;display:flex;align-items:center;flex-direction:column;gap:3px;font-size:16px;font-weight:600;line-height:1.2}
+.reveal .paper-citation .paper-qr img{display:block;width:116px;height:116px;margin:0;border:0;box-shadow:none;background:#fff}
+.paper-qr:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.reveal .slides>section.paper-slide .source-line{bottom:168px;right:245px;font-size:15px}
+.reveal .paper-slide .bottom-note{right:245px}
+/* Financial support and collaboration are distinct acknowledgements. */
+.project-credits{position:absolute;left:90px;right:240px;top:660px;height:57px;display:flex;align-items:center;justify-content:space-between;gap:30px;border-top:1px solid var(--rule);padding-top:9px}
+.credit-group{display:flex;align-items:center;gap:25px;min-width:0}
+.credit-heading{font-size:15px;color:var(--ink);line-height:1.3;white-space:nowrap}
+.credit-heading small{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.deepreader-logo{position:relative;display:block;flex-shrink:0;width:190px;height:51px;overflow:hidden}
+.reveal .deepreader-logo img{position:absolute;max-width:none;max-height:none;width:224.6px;height:91.85px;left:-17.57px;top:-20.81px;margin:0}
+.reveal .insiders-logo{width:190px;height:auto;margin:0}
+.research-collaboration{border-left:1px solid var(--rule);padding-left:30px;gap:24px}
+.reveal .nust-logo{width:62px;height:auto;margin:0}
+.reveal .rheinmain-logo{width:178px;height:auto;margin:0}
+.paper-slide .djinn-pipeline-flow{top:294px}
+.paper-slide .pipeline-page{width:216px}
+.djinn-pipeline .djinn-stage h3{margin-bottom:10px}
+.djinn-pipeline .djinn-stage .qa-label{margin-top:14px}
+.djinn-pipeline .pipeline-answer{font-size:30px;margin-top:12px}
+.djinn-pipeline .verification-rule{margin:14px 0 10px;padding-top:10px}
+.reveal .slides>#docdjinn-generation .source-line{bottom:234px;font-size:13px}
+.paper-slide .prediction-row{margin-top:14px}
+.paper-slide .prediction-row img{width:330px;height:330px}
+.paper-slide .prediction-legend{margin-top:5px;width:calc(100% - 150px)}
+.reveal .slides>#docdjinn-evidence .bottom-note{bottom:202px}
+.reveal .slides>#interpretation .source-line{bottom:168px}
+.reveal .slides .gaf-variants{right:245px;top:705px}
+.reveal .slides .gaf-pair-note{right:245px;top:704px;font-size:18px}
+.reveal .slides>#grid-aligned-forgery .source-line,.reveal .slides>#gaf-results .source-line{bottom:145px;font-size:13px}
+.paper-slide .gaf-result-chart{height:345px}
+.paper-slide .grid-figure figcaption{max-width:435px}
+.reveal .slides>#grid-experiment .source-line{width:760px;right:auto}
+@media print{.reveal .paper-citation{bottom:83px!important}.reveal .paper-slide .source-line{bottom:168px!important}.reveal #docdjinn-generation .source-line{bottom:234px!important}}

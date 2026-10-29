@@ -1,0 +1,72 @@
+/* Slide frame: navigation sits outside the 16:9 canvas. Content and credits
+   occupy separate vertical bands; figure provenance flows with the authors. */
+body{--toolbar-height:46px}
+.reveal{height:calc(100% - var(--toolbar-height))}
+body.embedded-preview .reveal{height:100%}
+.journey-mode #research-journey{bottom:var(--toolbar-height)}
+.journey-mode .journey-final-copy{left:650px}
+body.embedded-preview #research-journey{bottom:0}
+.reveal .slides>section.paper-slide>.paper-citation{left:90px;right:90px;top:730px;bottom:auto!important;height:150px;min-height:0;padding:0;border:0;display:grid;grid-template-columns:minmax(0,1fr) 116px;gap:36px;align-items:center}
+.reveal .slides .paper-citation .citation-credit{position:static;width:auto;min-width:0;border-top:1px solid var(--rule);padding:12px 0 0;font-size:18px;line-height:1.3}
+.reveal .slides .paper-citation .source-line{position:static!important;inset:auto!important;width:auto!important;max-width:none;margin:0 0 10px;padding:0;font-size:14px!important;line-height:1.35;color:var(--muted)}
+.reveal .slides .paper-citation .citation-authors{display:block}
+.reveal .slides .paper-citation .equal-credit{margin:5px 0 0;font-size:15px;line-height:1.2}
+.reveal .slides .paper-citation .paper-qr{position:static;inset:auto;width:116px;align-self:center;gap:3px;font-size:16px;line-height:1.2}
+.reveal .slides .paper-citation .paper-qr img{width:116px;height:116px}
+/* Full title introductions have a clear gap before diagrams and step numbers. */
+.reveal .slides #docdjinn-generation .djinn-pipeline-flow{top:320px}
+.reveal .slides #docdjinn-generation .project-credits{top:678px;height:51px;padding-top:7px;right:90px}
+.reveal .slides #docdjinn-generation .credit-group{gap:22px}
+.reveal .slides #docdjinn-generation .research-collaboration{padding-left:30px}
+.reveal .slides #docdjinn-generation .pipeline-page{width:204px}
+.reveal .slides #docdjinn-generation .djinn-stage .chapter-code{font-size:16px;line-height:1.3}
+.reveal .slides #docdjinn-generation .djinn-stage .diagram-caption{font-size:15px!important;line-height:1.3}
+.reveal .slides #docdjinn-generation .djinn-stage .qa-label{margin-top:8px}
+.reveal .slides #docdjinn-generation .pipeline-answer{font-size:28px;margin-top:9px}
+.reveal .slides #docdjinn-generation .verification-rule{padding-top:8px;margin:12px 0 9px}
+/* Give results and captions breathing room without shrinking the slide text. */
+.reveal .slides #stylusai-architecture .stylus-model{height:425px;margin-top:18px}
+.reveal .slides #stylusai-revisit .stylus-result{margin-top:20px;padding-top:14px}
+.reveal .slides #stylusai-revisit .cer-definition{max-width:365px}
+.reveal .slides #docdjinn-evidence #docvqa-chart{height:350px}
+.reveal .slides #docdjinn-evidence .bottom-note{top:700px;bottom:auto;font-size:20px}
+.reveal .slides #docdjinn-handwriting .handwriting-layout{margin-top:14px}
+.reveal .slides #docdjinn-handwriting .aligned-sentence{top:277px}
+.reveal .slides #docdjinn-handwriting .aligned-sentence img{width:900px}
+.reveal .slides #docdjinn-handwriting .insertion-caption{top:400px}
+.reveal .slides #docdjinn-breadth .breadth-panel svg{height:190px;display:block}
+.reveal .slides #docdjinn-breadth .breadth-contribution{top:690px;font-size:21px;padding-top:12px}
+.reveal .slides #docscribe-task .reconstruction-window{height:250px}
+.reveal .slides #docscribe-task .comparison-caption{top:708px}
+.reveal .slides #docscribe-evidence .scribe-model-key{top:705px}
+.reveal .slides #docforgenet-task .forensic-image,.reveal .slides #docforgenet-task .forensic-image img{width:360px;height:360px}
+.reveal .slides #docforgenet-method .forge-model-diagram{height:385px}
+.reveal .slides #docforgenet-method .forge-training{top:697px;padding-top:9px}
+.reveal .slides #docforgenet-evidence .forge-result-panel svg{height:210px;margin-top:10px;display:block}
+.reveal .slides #docforgenet-evidence .forge-delta{margin-top:0!important}
+.reveal .slides #docforgenet-evidence .forge-results-takeaway{top:684px;padding-top:12px;right:90px;font-size:21px;line-height:1.3}
+.reveal .slides #jpeg-cue-question .cue-source svg{width:335px;height:335px}
+.reveal .slides #gaf-prediction .gaf-evidence-layout img{width:350px;height:350px}
+.reveal .slides #grid-aligned-forgery .gaf-variants{top:707px;right:90px}
+.reveal .slides #gaf-results .gaf-pair-note{top:710px;right:90px;font-size:17px}
+.reveal .slides #grid-experiment .grid-diagram{width:370px;height:370px}
+.reveal .slides #grid-experiment .grid-figure figcaption{max-width:500px;font-size:16px;gap:7px;margin-top:12px}
+.reveal .slides #grid-experiment .state-caption{font-size:21px}
+.reveal .slides #prediction-change .prediction-legend{margin-top:12px;width:auto}
+.reveal .slides #measured-results #results-chart{height:380px}
+/* Backup material follows the same footer boundary as the main deck. */
+.reveal .slides #docscribe-learning .vocabulary{margin-top:15px}
+.reveal .slides #docscribe-learning .training-scope{top:680px;right:242px;padding-top:8px;gap:45px}
+.reveal .slides #docscribe-transfer .transfer-caveats{top:665px;right:242px}
+/* Separate the full-page reveal from its takeaway, including italic descenders. */
+.reveal .slides #motivation-document .document-scene{height:405px}
+.reveal .slides #motivation-document .reveal-stage-caption{top:744px}
+.reveal .slides #motivation-document .source-line{bottom:72px}
+/* Deterministic QA mode only: ordinary presentation animations are unchanged. */
+html.review-layout *,html.review-layout *::before,html.review-layout *::after{transition:none!important;animation:none!important}
+@media print{.reveal{height:100%}.reveal .slides>section.paper-slide>.paper-citation{top:730px!important;bottom:auto!important}.reveal .slides .paper-citation .source-line{position:static!important;inset:auto!important}}
+
+/* Slide 18: explicit JPEG input pair and attention scaling. */
+.reveal .slides #docforgenet-method .forge-input-caption{font-size:17px;text-anchor:middle}
+.reveal .slides #docforgenet-method .forge-block-feature{font-size:15px;text-anchor:middle}
+.reveal .slides #docforgenet-method .forge-scaling-note{font-size:18px;text-anchor:middle;fill:var(--accent)}

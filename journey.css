@@ -1,0 +1,30 @@
+/* Content-led closing: the map itself opens into the final research landscape. */
+#research-journey{display:none}.journey-final-copy{display:none}
+.journey-mode #research-journey{display:block;visibility:hidden;position:fixed;inset:0;z-index:12;pointer-events:none}
+.journey-mode.journey-finale #research-journey{visibility:visible}
+#research-journey>svg{width:100%;height:100%;display:block;overflow:hidden}
+.journey-mode .reading-progress{display:none}
+.journey-mode.journey-overview #research-journey{display:none}
+.journey-track,.journey-ink{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#23786c}
+.journey-track{opacity:.13}.journey-ink{stroke-dasharray:1;stroke-dashoffset:1;opacity:.85}
+.journey-integrity{stroke:#b95d43}.journey-conclusion,.journey-foundation{stroke:#b19878}
+.dark-slide .journey-synthesis{stroke:#85c7b7}.dark-slide .journey-integrity{stroke:#db987e}.dark-slide .journey-foundation,.dark-slide .journey-conclusion{stroke:#dfbb93}
+.journey-map-labels{opacity:0}.journey-era{font-family:ColloquiumSans;font-size:15px;letter-spacing:1.6px;fill:#b1bdb1}.journey-work{font-family:ColloquiumSerif;font-size:31px;fill:#ecdfc8}.journey-description{font-family:ColloquiumSans;font-size:17px;fill:#a8b9ae}.journey-upper{fill:#91c6b6}.journey-lower{fill:#d99d83}
+#journey-numbers{opacity:0}#journey-numbers a{pointer-events:none;cursor:pointer;text-decoration:none}#journey-numbers circle{fill:#173936;stroke:#8fa99a;stroke-width:1}#journey-numbers text{fill:#f3f0e8;font-family:ColloquiumSans;font-size:18px;text-anchor:middle;dominant-baseline:middle;font-variant-numeric:tabular-nums}#journey-numbers a:hover circle,#journey-numbers a:focus circle{fill:#dfbb93;stroke:#dfbb93;stroke-width:3}#journey-numbers a:hover text,#journey-numbers a:focus text{fill:#173936}#journey-numbers a:focus{outline:none}
+.journey-finale.journey-formed #journey-numbers a{pointer-events:auto}
+#journey-preview{font-family:ColloquiumSans;font-size:17px;fill:#d9b594;opacity:0}.journey-finale.journey-formed #journey-preview{opacity:1}
+.journey-completion{opacity:0;pointer-events:none}.journey-halo{fill:#dfbb93;opacity:.6}.journey-ring{fill:none;stroke:#dfbb93;stroke-width:1;opacity:.7}
+.journey-mode #thank-you>:not(.notes):not(.journey-final-copy){display:none}
+.journey-mode .journey-final-copy{display:block;position:absolute;left:615px;top:330px;opacity:0;transform:translateY(15px);transition:opacity .55s ease,transform .55s ease}
+.journey-finale.journey-formed .journey-final-copy{opacity:1;transform:none}
+.reveal .journey-final-copy .journey-kicker{font-size:14px;letter-spacing:.17em;text-transform:uppercase;color:#a5bdb0;margin-bottom:18px}
+.reveal .journey-final-copy h2{font-size:65px;line-height:1.04;letter-spacing:-.035em}.reveal .journey-final-copy h2 em{color:#dfbb93}
+.reveal .journey-final-copy .journey-conclusion{font-size:19px;color:#c7d2c5;margin-top:20px}
+.reveal .journey-final-copy .journey-thanks{font-family:ColloquiumSerif;font-size:35px;color:#f3f0e8;margin-top:26px}.journey-thanks span{font-family:ColloquiumSans;font-size:18px;color:#a5bdb0;margin-left:18px}
+@media(prefers-reduced-motion:reduce){.journey-final-copy{transition:none!important}}
+@media print{#research-journey,.journey-final-copy{display:none!important}.journey-mode #thank-you>:not(.notes):not(.journey-final-copy){display:block}}
+
+.embedded-preview .presentation-bar,.embedded-preview .reading-progress{display:none}
+
+.journey-mode .progress-synthesis .map-link{stroke:var(--teal);opacity:.7}
+.journey-mode .progress-foundation .map-link{stroke:#b19878;opacity:.7}

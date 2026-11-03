@@ -7,9 +7,11 @@ body.embedded-preview .reveal{height:100%}
 .journey-mode .journey-final-copy{left:650px}
 body.embedded-preview #research-journey{bottom:0}
 .reveal .slides>section.paper-slide>.paper-citation{left:90px;right:90px;top:730px;bottom:auto!important;height:150px;min-height:0;padding:0;border:0;display:grid;grid-template-columns:minmax(0,1fr) 116px;gap:36px;align-items:center}
-.reveal .slides .paper-citation .citation-credit{position:static;width:auto;min-width:0;border-top:1px solid var(--rule);padding:12px 0 0;font-size:18px;line-height:1.3}
-.reveal .slides .paper-citation .source-line{position:static!important;inset:auto!important;width:auto!important;max-width:none;margin:0 0 10px;padding:0;font-size:14px!important;line-height:1.35;color:var(--muted)}
+.reveal .slides .paper-citation .citation-credit{position:static;width:auto;min-width:0;border-top:1px solid var(--rule);padding:10px 0 0;font-size:18px;line-height:1.3}
+.reveal .slides .paper-citation .source-line{position:static!important;inset:auto!important;width:auto!important;max-width:none;margin:0 0 6px;padding:0;font-size:14px!important;line-height:1.35;color:var(--muted)}
 .reveal .slides .paper-citation .citation-authors{display:block}
+.reveal .slides .paper-citation .citation-publication{display:block;margin-top:3px;font-size:17px;line-height:1.3;color:var(--ink)}
+.reveal .slides .paper-citation .citation-publication cite{font-style:italic}
 .reveal .slides .paper-citation .equal-credit{margin:5px 0 0;font-size:15px;line-height:1.2}
 .reveal .slides .paper-citation .paper-qr{position:static;inset:auto;width:116px;align-self:center;gap:3px;font-size:16px;line-height:1.2}
 .reveal .slides .paper-citation .paper-qr img{width:116px;height:116px}
@@ -71,7 +73,7 @@ html.review-layout *,html.review-layout *::before,html.review-layout *::after{tr
 .reveal .slides #jpeg-cue-question>.jpeg-collaboration{top:692px;right:90px;height:52px;padding-top:7px;justify-content:flex-start}
 .reveal .slides #jpeg-cue-question .research-collaboration{border-left:0;padding-left:0;gap:26px}
 .reveal .slides #jpeg-cue-question .nust-logo{width:62px;max-height:52px;object-fit:contain}
-.reveal .slides #jpeg-cue-question>.paper-citation{top:758px;height:122px}
+.reveal .slides #jpeg-cue-question>.paper-citation{top:758px;height:122px;grid-template-rows:minmax(0,1fr)}
 .reveal .slides #docforgenet-task .forensic-image,.reveal .slides #docforgenet-task .forensic-image img{width:330px;height:330px}
 .reveal .slides #docforgenet-task .localization-definition>p{font-size:34px}
 .reveal .slides #docforgenet-task .jpeg-scope{margin-top:12px;padding-top:12px}

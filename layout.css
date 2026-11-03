@@ -67,10 +67,11 @@ html.review-layout *,html.review-layout *::before,html.review-layout *::after{tr
 .reveal .slides #docforgenet-method .forge-block-feature{font-size:15px;text-anchor:middle}
 .reveal .slides #docforgenet-method .forge-scaling-note{font-size:18px;text-anchor:middle;fill:var(--accent)}
 
-/* Funding has its own band on each forensic paper's introductory slide. */
-.reveal .slides :is(#docforgenet-task,#jpeg-cue-question)>.funding-ack{position:absolute;left:90px;right:90px;top:700px;display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;align-items:start;border-top:1px solid var(--rule);padding-top:10px;color:var(--muted);font-size:17px;line-height:1.35}
-.funding-ack>span{font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--accent);padding-top:2px}
-.reveal .slides :is(#docforgenet-task,#jpeg-cue-question)>.paper-citation{top:758px;height:122px}
+/* Keep the JPEG study's collaboration separate from its publication credit. */
+.reveal .slides #jpeg-cue-question>.jpeg-collaboration{top:692px;right:90px;height:52px;padding-top:7px;justify-content:flex-start}
+.reveal .slides #jpeg-cue-question .research-collaboration{border-left:0;padding-left:0;gap:26px}
+.reveal .slides #jpeg-cue-question .nust-logo{width:62px;max-height:52px;object-fit:contain}
+.reveal .slides #jpeg-cue-question>.paper-citation{top:758px;height:122px}
 .reveal .slides #docforgenet-task .forensic-image,.reveal .slides #docforgenet-task .forensic-image img{width:330px;height:330px}
 .reveal .slides #docforgenet-task .localization-definition>p{font-size:34px}
 .reveal .slides #docforgenet-task .jpeg-scope{margin-top:12px;padding-top:12px}
@@ -83,4 +84,4 @@ html.review-layout *,html.review-layout *::before,html.review-layout *::after{tr
 .reveal .slides #jpeg-cue-question .cue-source svg{width:280px}
 .reveal .slides #jpeg-cue-question .cue-questions>div{margin-top:20px}
 .reveal .slides #jpeg-cue-question .cue-reliability small{margin-top:10px}
-@media print{.reveal .slides :is(#docforgenet-task,#jpeg-cue-question)>.paper-citation{top:758px!important}}
+@media print{.reveal .slides #jpeg-cue-question>.paper-citation{top:758px!important}}

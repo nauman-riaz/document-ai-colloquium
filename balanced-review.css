@@ -1,0 +1,20 @@
+/* Balanced review: larger page examples and a concise reconstruction summary. */
+.reveal .slides #motivation-learning .document-collection{left:120px;top:275px;width:1360px;height:450px;gap:50px}
+.reveal .slides #motivation-learning .document-collection figure{width:390px}
+.reveal .slides #motivation-learning .document-collection img{height:390px}
+.reveal .slides #motivation-learning .document-collection .anchor-document{width:440px}
+.reveal .slides #motivation-learning .anchor-document img{height:auto;max-height:415px}
+.reveal .slides #motivation-learning .learning-stream{top:765px}
+.reveal .slides #docdjinn-generation .pipeline-page{width:280px;height:175px;box-shadow:0 5px 20px #203b3712}
+.reveal .slides #docdjinn-generation .pipeline-page svg{position:static;width:280px;height:175px;display:block;background:#fff}
+.reveal .slides #docdjinn-generation .pipeline-page rect{stroke-width:3;fill:#23786c08}
+.scribe-summary-training{position:absolute;left:90px;right:90px;top:290px;display:flex;align-items:center;gap:28px;border-top:1px solid var(--rule);padding-top:15px;font-size:22px}
+.scribe-summary-training i{font-style:normal;color:var(--teal)}.scribe-summary-training strong{font-weight:400}.scribe-summary-training small{margin-left:auto;font-size:18px;color:var(--muted)}
+.scribe-summary-body{position:absolute;top:350px;left:90px;right:90px;display:grid;grid-template-columns:900px 430px;gap:90px}
+.scribe-summary-pair{display:grid;grid-template-columns:425px 425px;gap:50px}
+.scribe-summary-pair figcaption{font-family:ColloquiumSerif;font-size:28px;margin-bottom:13px}.scribe-summary-pair figcaption span{font-family:ColloquiumSans;font-size:15px;color:var(--muted);display:block;margin-top:6px}
+.scribe-summary-pair svg{display:block;width:425px;height:260px;border:1px solid var(--rule);background:#fff}
+.scribe-summary-result{padding-left:25px;border-left:1px solid var(--rule)}.scribe-summary-metric{font-size:21px;color:var(--teal);margin-bottom:18px!important}.scribe-summary-result #scribe-structure-chart{height:175px;width:100%}.scribe-summary-scale{font-size:24px;margin-top:7px!important}.scribe-summary-scale strong{color:var(--teal)}.scribe-summary-scope{font-size:18px;line-height:1.45;color:var(--muted);margin-top:14px!important}
+.scribe-summary-bridge{position:absolute;left:90px;right:90px;top:700px;border-top:1px solid var(--rule);padding-top:13px;font-family:ColloquiumSerif;font-size:30px}.scribe-summary-bridge em{color:var(--teal);margin-left:25px}
+.method-venue{font-family:ColloquiumSans;font-size:14px;fill:var(--muted);font-weight:400}.forge-method-venue{font-size:17px;fill:var(--muted);font-weight:400}
+.future-forensic-motivation .signature-precedent{font-size:17px;margin-top:13px;color:#b5c7bf}

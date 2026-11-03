@@ -1,3 +1,4 @@
+if(location.hash.startsWith('#/docscribe-evidence'))location.replace(location.href.replace('#/docscribe-evidence','#/docscribe-task/0'));
 if(new URLSearchParams(location.search).has('review-layout'))document.documentElement.classList.add('review-layout');
 /* Local, dependency-free authoring layer. Reveal and GSAP are vendored. */
 const DOCVQA_RESULTS = [
@@ -6,12 +7,12 @@ const DOCVQA_RESULTS = [
   {label:'Full real',value:71.45}
 ];
 const RESULTS = [
-  {model:'CAT-Net',baseline:75.0,prc:62.4,fpa:1.1},
-  {model:'DTD',baseline:72.6,prc:10.7,fpa:17.7},
-  {model:'DocForgeNet',baseline:77.4,prc:9.5,fpa:21.5},
-  {model:'FFDN',baseline:85.6,prc:75.2,fpa:0.1},
-  {model:'RTM',baseline:72.2,prc:64.4,fpa:0.2},
-  {model:'ADCD-Net',baseline:80.6,prc:84.5,fpa:0.3}
+  {model:'CAT-Net',venue:'WACV 2021',baseline:75.0,prc:62.4,fpa:1.1},
+  {model:'DTD',venue:'CVPR 2023',baseline:72.6,prc:10.7,fpa:17.7},
+  {model:'DocForgeNet',venue:'ICDAR 2025 · Ours',baseline:77.4,prc:9.5,fpa:21.5},
+  {model:'FFDN',venue:'ECCV 2024',baseline:85.6,prc:75.2,fpa:0.1},
+  {model:'ASC-Former',venue:'PR 2025 · RTM',baseline:72.2,prc:64.4,fpa:0.2},
+  {model:'ADCD-Net',venue:'ICCV 2025',baseline:80.6,prc:84.5,fpa:0.3}
 ];
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const reducedMotion = (new URLSearchParams(location.search).has('review-layout') || window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -49,27 +50,23 @@ function researchMap(variant) {
   if (variant === 'future') {
     // Reuse the same map so the future direction visibly grows from DocDjinn.
     const history = researchMap('progress').replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '');
-    return `<svg viewBox="0 0 1420 460" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Research map. DocDjinn supplies DocScribe's training pairs. A separate extension from DocDjinn leads to a completed SFT generator and planned GRPO training; the forensic stream remains alongside it.">
+    return `<svg viewBox="0 0 1420 460" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Research map. DocDjinn supplies DocScribe's training pairs. A separate extension from DocDjinn leads to a compact generator and GRPO feedback; the forensic stream remains alongside it.">
       <g class="future-map-history">${history}</g>
       <g class="future-extension future-sft-extension">
         <path class="future-extension-line" d="M358.4 115.4C550 115.4 760 55 980 110"/>
         <text class="future-area-label" x="980" y="30">GENERATION</text>
-        <text class="future-map-status" x="1018" y="84">SFT completed</text>
+        <text class="future-map-status" x="1018" y="84">Compact generator</text>
         <circle class="future-sft-dot future-target-dot" cx="980" cy="110" r="7"/>
         <text class="future-map-title" x="1018" y="126">Qwen3-VL-4B</text>
-        <text class="future-map-desc" x="1018" y="163">Trained on DocDjinn examples</text>
+        <text class="future-map-desc" x="1018" y="163">Transfer document-generation skills</text>
       </g>
       <g class="future-extension future-grpo-extension">
         <path class="future-planned-line" d="M980 122V252"/>
         <circle class="future-planned-dot" cx="980" cy="262" r="7"/>
-        <text class="future-map-status future-planned-text" x="1018" y="235">GRPO planned</text>
+        <text class="future-map-status future-planned-text" x="1018" y="235">GRPO feedback</text>
         <text class="future-map-title" x="1018" y="277">Learn from feedback</text>
         <text class="future-map-desc" x="1018" y="314">Generate → score → update</text>
         <text class="future-reward-label" x="1018" y="347">Usefulness + validity + diversity</text>
-        <g class="future-map-legend" transform="translate(1018 389)" aria-label="Filled node: completed; hollow node: planned">
-          <circle cx="0" cy="-5" r="5"/><text x="15" y="0">Completed</text>
-          <circle class="legend-planned" cx="145" cy="-5" r="5"/><text x="160" y="0">Planned</text>
-        </g>
       </g>
     </svg>`;
   }
@@ -206,31 +203,16 @@ const chartStart = 205, chartWidth = 690;
 const cx = value => chartStart + value / 100 * chartWidth;
 document.getElementById('results-chart').innerHTML = `<svg viewBox="0 0 930 435" role="img" aria-label="Pixel-level F1 on DocTamper TestingSet: CAT-Net 75.0 to 62.4; DTD 72.6 to 10.7; DocForgeNet 77.4 to 9.5; FFDN 85.6 to 75.2; RTM 72.2 to 64.4; ADCD-Net 80.6 to 84.5. Higher is better.">
   ${[0,25,50,75,100].map(n => `<line class="chart-grid" x1="${cx(n)}" x2="${cx(n)}" y1="12" y2="389"/><text class="chart-value" x="${cx(n)}" y="424" text-anchor="middle" style="font-size:17px">${n}</text>`).join('')}
-  ${RESULTS.map((r,i) => {const y=39+i*65;return `<g><text class="chart-model" x="0" y="${y+7}" ${r.model==='DocForgeNet'?'style="font-weight:700"':''}>${r.model}</text>
+  ${RESULTS.map((r,i) => {const y=39+i*65;return `<g><text class="chart-model" x="0" y="${y+7}" ${r.model==='DocForgeNet'?'style="font-weight:700"':''}>${r.model}<tspan class="method-venue" x="0" dy="19">(${r.venue})</tspan></text>
     <line class="chart-connector after-result" x1="${cx(r.baseline)}" x2="${cx(r.prc)}" y1="${y}" y2="${y}"/>
     <circle class="chart-baseline" cx="${cx(r.baseline)}" cy="${y}" r="6"/><text class="chart-value" x="${cx(r.baseline)}" y="${y-13}" text-anchor="middle">${r.baseline.toFixed(1)}</text>
     <circle class="chart-prc after-result" cx="${cx(r.prc)}" cy="${y}" r="6"/><text class="chart-value chart-prc-label after-result" x="${cx(r.prc)}" y="${y+26}" text-anchor="middle">${r.prc.toFixed(1)}</text></g>`;}).join('')}
 </svg>`;
 
-const SCRIBE_MODELS = [
-  {name:'DocScribe',structure:.42,text:.52,precision:.77,recall:.31},
-  {name:'Qwen',structure:.43,text:.97,precision:.52,recall:.41},
-  {name:'Claude',structure:.60,text:.98,precision:.85,recall:.89}
-];
-for(const metric of ['structure','text']){
-  document.getElementById(`scribe-${metric}-chart`).innerHTML=`<svg viewBox="0 0 420 270" role="img" aria-label="${metric==='structure'?'TreeBLEU':'Text F1'}: ${SCRIBE_MODELS.map(m=>`${m.name} ${m[metric].toFixed(2)}`).join('; ')}">
-    ${SCRIBE_MODELS.map((m,i)=>{const y=30+i*78;return `<g class="metric-model-${i}"><text x="0" y="${y}" class="metric-model-name">${m.name}</text><text x="395" y="${y}" text-anchor="end" class="metric-value">${m[metric].toFixed(2)}</text><line x1="0" x2="395" y1="${y+20}" y2="${y+20}" class="metric-track"/><line x1="0" x2="${395*m[metric]}" y1="${y+20}" y2="${y+20}" class="metric-bar"/></g>`;}).join('')}
-    <text x="0" y="266" class="metric-tick">0</text><text x="395" y="266" text-anchor="end" class="metric-tick">1</text></svg>`;
-}
-let comparisonTween=null;
-function synchronizeComparison(step,animate){
-  comparisonTween?.kill();
-  const box=step>=2?'140 620 1100 700':'0 0 2678 3959';
-  const frames=document.querySelectorAll('.reconstruction-window');
-  if(animate&&!reducedMotion&&!printMode)comparisonTween=gsap.to(frames,{attr:{viewBox:box},duration:.7,ease:'power2.inOut'});
-  else frames.forEach(e=>e.setAttribute('viewBox',box));
-  document.getElementById('comparison-view-label').textContent=step>=2?'Corresponding text region · magnified at the same scale':'Whole renderings · matched example · same display scale';
-}
+// Two-model structural comparison; the complete evaluation remains in source notes.
+document.getElementById('scribe-structure-chart').innerHTML = `<svg viewBox="0 0 420 175" role="img" aria-label="HTML structure TreeBLEU: DocScribe, 282 million parameters, 0.42; Qwen, 7 billion parameters, 0.43.">
+  ${[{name:'DocScribe · 282M',score:.42},{name:'Qwen · 7B',score:.43}].map((m,i)=>{const y=28+i*83;return `<g class="metric-model-${i}"><text x="0" y="${y}" class="metric-model-name">${m.name}</text><text x="395" y="${y}" text-anchor="end" class="metric-value">${m.score.toFixed(2)}</text><line x1="0" x2="395" y1="${y+22}" y2="${y+22}" class="metric-track"/><line x1="0" x2="${395*m.score}" y1="${y+22}" y2="${y+22}" class="metric-bar"/></g>`;}).join('')}
+</svg>`;
 
 const documentStates = [
   {x:-2260,y:-1628,scale:6,clipX:300,clipY:170,clipW:810,clipH:160},
@@ -320,8 +302,6 @@ function synchronize({animate=true}={}) {
   else closingMotion.finish();
   if(slide.id==='motivation-document')synchronizeDocument(printMode?2:step,animate&&lastSlideId===slide.id);
   else documentTween?.kill();
-  if(slide.id==='docscribe-task')synchronizeComparison(printMode?1:step,animate&&lastSlideId===slide.id);
-  else comparisonTween?.kill();
   if(slide.id==='grid-experiment') {
     const effective=printMode?3:step;
     sceneTween?.kill();

@@ -2,7 +2,7 @@
 
 **How Reliable Is Document AI?** — Nauman Riaz, second PhD colloquium.
 
-This repository mirrors the complete current presentation site: 32 slides,
+This repository mirrors the complete current presentation site: 31 slides,
 animations, publication references, audience slide numbers, full speaker notes,
 and the combined presenter window. There is no backup deck.
 

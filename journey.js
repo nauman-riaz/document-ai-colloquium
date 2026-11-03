@@ -12,7 +12,7 @@ const researchJourney = (() => {
     {ids:slides.filter(s=>s.dataset.indexGroup==='Synthesis & understanding'&&s.id!=='research-map').map(s=>s.id),x1:700,x2:1100,y:250},
     {ids:slides.filter(s=>s.dataset.indexGroup==='Document integrity').map(s=>s.id),x1:700,x2:1180,y:650}
   ];
-  const positions={'research-map':[535,445],'research-question':[1370,445],'thank-you':[1490,445],'research-outlook':[1450,80],'forensic-outlook':[1450,770]};
+  const positions={'research-map':[535,445],'publications':[300,540],'research-question':[1370,445],'thank-you':[1490,445],'research-outlook':[1450,80],'forensic-outlook':[1450,770]};
   const radii={};
   for(const group of pointGroups){
     const spacing=(group.x2-group.x1)/Math.max(group.ids.length-1,1);
@@ -50,7 +50,7 @@ const researchJourney = (() => {
       <g class="journey-anchor" aria-hidden="true"><image href="assets/docdjinn-equipment-form.png" x="-45" y="-43.2" width="90" height="86.4"/></g>
       <g class="journey-completion" aria-hidden="true"><circle class="journey-halo" cx="1370" cy="445" r="40" filter="url(#journey-glow)"/><circle class="journey-ring" cx="1370" cy="445" r="27"/></g>
       <g id="journey-numbers" aria-label="Jump to any slide from the research path">
-        ${slides.map((s,i)=>`<a href="#/${s.id}" tabindex="-1" aria-label="Go to slide ${i+1}: ${s.dataset.title}" data-slide="${s.id}" transform="translate(${points[i].join(' ')})"><title>${String(i+1).padStart(2,'0')} · ${s.dataset.title}</title><circle r="${radii[s.id]||23}"/><text y="1">${String(i+1).padStart(2,'0')}</text></a>`).join('')}
+        ${slides.map((s,i)=>`<a href="#/${s.id}" tabindex="-1" aria-label="Go to slide ${i+1}: ${s.dataset.title}" data-slide="${s.id}" transform="translate(${points[i].join(' ')})"><title>${String(i+1).padStart(2,'0')} · ${s.dataset.title}</title><circle r="${radii[s.id]||23}"/><text y="1">${String(i+1).padStart(2,'0')}</text>${s.id==='publications'?'<text class="journey-publication-label" x="38" y="1">Publications</text>':''}</a>`).join('')}
       </g>
     </g>
     <text id="journey-preview" x="90" y="824" aria-live="polite">Select a number to return to the evidence · End returns here</text>

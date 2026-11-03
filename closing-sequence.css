@@ -52,3 +52,9 @@ text.journey-future-upper,text.journey-future-lower{stroke:none}
 /* Warm closing accent; distinct from both research-stream colours. */
 .reveal .journey-final-copy .journey-thanks em{color:#e3be87;text-shadow:0 0 28px #e3be8726}
 .journey-thanks::before{content:"";position:absolute;left:0;top:-24px;width:100px;height:2px;background:linear-gradient(90deg,#e3be87,#e3be8700)}
+
+/* The closing credit sits below the map and its numbered navigation. */
+.reveal .slides #thank-you>.closing-funding{display:grid;position:absolute;left:90px;right:90px;bottom:12px;grid-template-columns:220px minmax(0,1fr);gap:30px;border-top:1px solid #54716a;padding-top:8px;color:#c7d2c5;font-size:17px;line-height:1.25;z-index:13}
+.closing-funding>span{font-size:14px;line-height:1.5;color:#d9c9ad}
+.closing-funding strong{font-weight:600;letter-spacing:.04em}
+.journey-mode:not(.journey-index) #thank-you>.closing-funding{visibility:hidden}

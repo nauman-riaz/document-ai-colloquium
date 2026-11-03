@@ -66,6 +66,10 @@ function researchMap(variant) {
         <text class="future-map-title" x="1018" y="277">Learn from feedback</text>
         <text class="future-map-desc" x="1018" y="314">Generate → score → update</text>
         <text class="future-reward-label" x="1018" y="347">Usefulness + validity + diversity</text>
+        <g class="future-map-legend" transform="translate(1018 389)" aria-label="Filled node: completed; hollow node: planned">
+          <circle cx="0" cy="-5" r="5"/><text x="15" y="0">Completed</text>
+          <circle class="legend-planned" cx="145" cy="-5" r="5"/><text x="160" y="0">Planned</text>
+        </g>
       </g>
     </svg>`;
   }

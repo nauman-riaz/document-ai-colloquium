@@ -1,0 +1,11 @@
+Collaboration logos added 2026-10-29, per presenter request.
+
+NUST signature (original PNG, proportions retained):
+https://nust.edu.pk/about-us/nust-brand/
+https://nust.edu.pk/wp-content/uploads/2020/04/NUST-Signature-01-300x269.png
+
+Hochschule RheinMain (official hsrm-logo symbol extracted as standalone SVG, original paths and colors retained):
+https://www.hs-rm.de/
+https://www.hs-rm.de/_assets/a92153751098915699a1afa17e77f864/Images/svg/sprite.symbol.svg#hsrm-logo
+
+These universities are acknowledged for research collaboration, separately from financial support. Existing DFKI/RPTU affiliation marks and DeepReader/Insiders support marks are retained. The original DeepReader PNG is unchanged; CSS excludes transparent padding to balance its visible size with Insiders.

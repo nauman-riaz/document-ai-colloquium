@@ -2,21 +2,23 @@
 
 **How Reliable Is Document AI?** — Nauman Riaz, second PhD colloquium.
 
-This is the public audience edition of the presentation: 31 slides, two backup
-slides, animations, full publication references, and a numbered discussion index.
-Speaker narration and presenter tools are not included.
+This repository mirrors the complete current presentation site: 31 slides,
+animations, publication references, audience slide numbers, full speaker notes,
+and the combined presenter window. There is no backup deck.
 
-View the presentation at https://nauman-riaz.github.io/document-ai-colloquium/.
+Open https://nauman-riaz.github.io/document-ai-colloquium/.
 
-Use the arrow keys or Space to advance, M for the research map, End for the
-closing slide index, O for the overview, and F for fullscreen. The on-screen
-controls support mouse and touch navigation. Select Backup for supplementary
-DocScribe material or References for full publication details.
+The toolbar is hidden by default, including old `?controls=1` links. Press **T**
+to reveal or hide it, and **S** to open presenter notes and navigation in a second
+window. Share only the slide window. Arrow keys/Space advance; M opens the
+research map; End opens the closing index; F enters fullscreen.
 
-All runtime dependencies and fonts are bundled. To view a local copy, run
-`python3 -m http.server 8000` in this directory and open http://localhost:8000.
+Speaker notes are included in this public repository and website, as requested
+by the presentation owner. Hiding controls does not restrict access to notes.
 
-The repository contains only the exported audience site. Authoring files,
-speaker scripts, original manuscript sources and their history are maintained
-separately. Third-party libraries and institutional marks retain their respective
-licenses and ownership; the Reveal.js license is in `vendor/reveal-LICENSE`.
+All site files match the local presentation. The GitHub Pages marker and this
+README are the only repository additions. Authoring history, planning files,
+LaTeX projects, credentials and hosting configuration are not part of the site.
+
+For a local preview, run `python3 -m http.server 8000` in this directory.
+Third-party libraries and institutional marks retain their respective licenses.

@@ -2,8 +2,9 @@
 (function(root) {
   const params=new URLSearchParams(location.search);
   const receiver=params.has('receiver');
-  const isPublic=document.documentElement.dataset.audience==='public';
-  let clean=receiver||params.get('controls')==='0'||(isPublic&&params.get('controls')!=='1');
+  // Old review links used controls=1. They must also open clean now.
+  let clean=receiver||params.get('rehearsal')!=='1';
+  if(params.has('controls')){const url=new URL(location.href);url.searchParams.delete('controls');history.replaceState(null,'',url);}
   let deck=null;
   function paint(){
     document.documentElement.classList.toggle('audience-clean',clean);
@@ -13,7 +14,8 @@
   function setClean(value){
     clean=receiver||Boolean(value);paint();
     if(!receiver){
-      const url=new URL(location.href);url.searchParams.set('controls',clean?'0':'1');
+      const url=new URL(location.href);url.searchParams.delete('controls');
+      if(clean)url.searchParams.delete('rehearsal');else url.searchParams.set('rehearsal','1');
       history.replaceState(null,'',url);
     }
     deck?.layout();

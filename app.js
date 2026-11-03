@@ -267,14 +267,14 @@ gridTimeline.seek(0);
 let sceneTween = null;
 let lastSlideId = null;
 let lastStep = -1;
-
+const speakerNotes = ColloquiumStepNotes.createController(document.querySelectorAll('.slides > section'));
 const deck = new Reveal({
   width:1600,height:900,margin:0,center:false,controls:false,progress:false,
   hash:true,fragmentInURL:true,history:false,transition:reducedMotion?'none':'fade',
   transitionSpeed:'fast',autoAnimateDuration:reducedMotion?0:.85,autoAnimateEasing:'ease-in-out',
   autoAnimateUnmatched:false,backgroundTransition:'fade',slideNumber:false,
   pdfSeparateFragments:false,pdfMaxPagesPerSlide:1,showNotes:false,
-  keyboard:presentationKeys(),plugins:[]
+  keyboard:presentationKeys(),plugins:[RevealNotes]
 });
 
 function presentationKeys() {
@@ -305,7 +305,8 @@ function synchronize({animate=true}={}) {
   const slide=deck.getCurrentSlide();if(!slide)return;
   const fragmentCount=fragmentGroups(slide).size;
   const step=fragmentGroups(slide,true).size;
-
+  // Registered before the Notes plugin connects, so its state message contains this step.
+  speakerNotes.show(slide,step);
   slide.dataset.step=String(printMode?fragmentCount:step);
   for(const [id,motion] of futureMapMotions) {
     if(slide.id===id)motion.update(printMode||step>0,{animate:animate&&lastSlideId===slide.id});
@@ -356,6 +357,9 @@ deck.on('pdf-ready',()=>{
 window.addEventListener('beforeprint',()=>futureMapMotions.forEach(motion=>motion.update(true,{animate:false})));
 window.addEventListener('afterprint',()=>futureMapMotions.forEach((motion,id)=>motion.update(fragmentGroups(document.getElementById(id),true).size>0,{animate:false})));
 ColloquiumAudience.bind(deck);
+// PRIVATE PRESENTER START
+const presenter=ColloquiumPresenter.create({deck,map:goToMap,closing:goToClosing});
+// PRIVATE PRESENTER END
 deck.initialize();
 
 document.getElementById('previous-button').addEventListener('click',()=>deck.prev());

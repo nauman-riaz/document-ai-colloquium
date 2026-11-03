@@ -54,10 +54,6 @@ body.embedded-preview #research-journey{bottom:0}
 .reveal .slides #grid-experiment .state-caption{font-size:21px}
 .reveal .slides #prediction-change .prediction-legend{margin-top:12px;width:auto}
 .reveal .slides #measured-results #results-chart{height:380px}
-/* Backup material follows the same footer boundary as the main deck. */
-.reveal .slides #docscribe-learning .vocabulary{margin-top:15px}
-.reveal .slides #docscribe-learning .training-scope{top:680px;right:242px;padding-top:8px;gap:45px}
-.reveal .slides #docscribe-transfer .transfer-caveats{top:665px;right:242px}
 /* Separate the full-page reveal from its takeaway, including italic descenders. */
 .reveal .slides #motivation-document .document-scene{height:405px}
 .reveal .slides #motivation-document .reveal-stage-caption{top:744px}

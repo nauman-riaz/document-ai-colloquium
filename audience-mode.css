@@ -5,4 +5,8 @@ html.audience-clean .reveal{height:100%!important}
 html.audience-clean.journey-mode #research-journey,html.audience-clean .journey-mode #research-journey{bottom:0}
 .presentation-bar .primary-control{padding:7px 12px;border:1px solid currentColor;border-radius:3px;font-weight:600;white-space:nowrap}
 .presentation-bar #audience-mode-button{white-space:nowrap}
+.reveal .slides>section>.audience-slide-number{display:block;position:absolute;right:22px;bottom:16px;min-width:58px;pointer-events:none;font:500 18px/1.2 ColloquiumSans,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.02em;text-align:right;color:#5d7067;z-index:14}
+.audience-slide-number>span{opacity:.65;font-size:14px}
+.reveal .slides>section.research-checkpoint>.audience-slide-number{color:#b8d1c6}
+.reveal .slides #thank-you>.audience-slide-number{display:block;color:#d9c9ad}
 @media print{.presentation-bar,.reading-progress{display:none!important}}

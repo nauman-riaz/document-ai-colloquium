@@ -1,0 +1,8 @@
+/* A full slide canvas during the talk; controls return only on a deliberate T. */
+html.audience-clean body{--toolbar-height:0px}
+html.audience-clean .presentation-bar,html.audience-clean .reading-progress{display:none!important}
+html.audience-clean .reveal{height:100%!important}
+html.audience-clean.journey-mode #research-journey,html.audience-clean .journey-mode #research-journey{bottom:0}
+.presentation-bar .primary-control{padding:7px 12px;border:1px solid currentColor;border-radius:3px;font-weight:600;white-space:nowrap}
+.presentation-bar #audience-mode-button{white-space:nowrap}
+@media print{.presentation-bar,.reading-progress{display:none!important}}

@@ -355,6 +355,7 @@ deck.on('pdf-ready',()=>{
 });
 window.addEventListener('beforeprint',()=>futureMapMotions.forEach(motion=>motion.update(true,{animate:false})));
 window.addEventListener('afterprint',()=>futureMapMotions.forEach((motion,id)=>motion.update(fragmentGroups(document.getElementById(id),true).size>0,{animate:false})));
+ColloquiumAudience.bind(deck);
 deck.initialize();
 
 document.getElementById('previous-button').addEventListener('click',()=>deck.prev());

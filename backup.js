@@ -13,6 +13,7 @@ function synchronizeBackup(){
   document.getElementById('next-button').disabled=deck.isLastSlide()&&step===groups.size;
 }
 for(const event of ['ready','slidechanged','fragmentshown','fragmenthidden'])deck.on(event,synchronizeBackup);
+ColloquiumAudience.bind(deck);
 deck.initialize();
 document.getElementById('previous-button').addEventListener('click',()=>deck.prev());
 document.getElementById('next-button').addEventListener('click',()=>deck.next());

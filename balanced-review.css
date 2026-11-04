@@ -46,3 +46,10 @@
 .reveal .slides section[data-paper="djinn"] .paper-citation .citation-credit{font-size:16px}
 .reveal .slides section[data-paper="djinn"] .paper-citation .citation-publication{font-size:15.5px}
 .reveal .slides section[data-paper="djinn"] .paper-citation .equal-credit{font-size:14px}
+
+/* Scale the DocDjinn support logos together, preserving their visual balance. */
+.reveal .slides #docdjinn-generation .deepreader-logo{width:161.5px;height:43.35px}
+.reveal .slides #docdjinn-generation .deepreader-logo img{width:190.91px;height:78.0725px;left:-14.9345px;top:-17.6885px}
+.reveal .slides #docdjinn-generation .insiders-logo{width:161.5px}
+.reveal .slides #docdjinn-generation .nust-logo{width:52.7px}
+.reveal .slides #docdjinn-generation .rheinmain-logo{width:151.3px}

@@ -20,7 +20,7 @@
 .future-forensic-motivation .signature-precedent{font-size:17px;margin-top:13px;color:#b5c7bf}
 
 /* Compact, native MathML remains available offline and shares existing reveals. */
-.reveal .slides #docdjinn-handwriting .aligned-sentence{top:270px}
+.reveal .slides #docdjinn-handwriting .aligned-sentence{top:280px}
 .baseline-math-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:46px}
 .baseline-equation{font-size:29px;color:var(--teal);margin-right:20px}
 .diagram-math{height:100%;width:100%;display:flex;align-items:center;justify-content:center;color:var(--accent);line-height:normal;padding:4px;overflow:visible}
@@ -53,3 +53,9 @@
 .reveal .slides #docdjinn-generation .insiders-logo{width:105px}
 .reveal .slides #docdjinn-generation .nust-logo{width:52.7px}
 .reveal .slides #docdjinn-generation .rheinmain-logo{width:100px}
+
+/* Keep the final placement caption under its document, clear of the sentence. */
+.reveal .slides #docdjinn-handwriting .handwriting-layout>.insertion-caption{left:0;top:390px;width:390px;gap:14px}
+/* Leave a clear gap between the reliability caption and collaboration divider. */
+.reveal .slides #jpeg-cue-question .cue-questions>div{margin-top:14px;padding-top:16px}
+.reveal .slides #jpeg-cue-question .cue-reliability small{margin-top:8px}

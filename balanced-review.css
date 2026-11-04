@@ -23,7 +23,7 @@
 .reveal .slides #docdjinn-handwriting .aligned-sentence{top:270px}
 .baseline-math-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:46px}
 .baseline-equation{font-size:29px;color:var(--teal);margin-right:20px}
-.diagram-math{height:100%;width:100%;display:flex;align-items:center;justify-content:center;color:var(--accent);line-height:1}
+.diagram-math{height:100%;width:100%;display:flex;align-items:center;justify-content:center;color:var(--accent);line-height:normal;padding:4px;overflow:visible}
 .attention-equation{font-size:32px}.complexity-equation{font-size:25px}
 .reveal .slides #docforgenet-method .forge-math-key{font-size:16px}
 .reveal .slides #docforgenet-method .forge-scaling-note{font-size:16px}
@@ -31,3 +31,7 @@
 .gaf-boundary-equations{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:10px;color:var(--accent)}
 .boundary-equation{font-size:26px}
 .reveal .slides #grid-aligned-forgery .boundary-equation-key{font-size:16px;line-height:1.3;margin-top:8px}
+
+/* Keep full MathML ascenders, descenders and superscripts inside the SVG. */
+.reveal .slides #docforgenet-method .forge-model-diagram{height:400px}
+#docforgenet-method foreignObject{overflow:visible}

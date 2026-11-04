@@ -17,3 +17,8 @@
 body.colloquium-presenter #speaker-controls{top:var(--presenter-top,132px)!important;height:calc(100% - var(--presenter-top,132px))!important}
 body.colloquium-presenter #current-slide{top:var(--current-top,140px)!important;height:var(--preview-height,32%)!important}
 body.colloquium-presenter #upcoming-slide{top:var(--upcoming-top,59%)!important;height:var(--preview-height,32%)!important}
+
+/* A visible reset action stays beside the elapsed timer in either notes layout. */
+#presenter-reset-timer{font:inherit;font-size:14px;color:#203c37;background:transparent;border:1px solid #97ab9d;border-radius:4px;padding:6px 10px;line-height:1.2;white-space:nowrap;cursor:pointer}
+#presenter-reset-timer:hover{background:#e0e6dd}
+#presenter-reset-timer:focus-visible{outline:2px solid #23786c;outline-offset:3px}

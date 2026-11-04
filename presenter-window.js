@@ -61,8 +61,12 @@
     $('#presenter-clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
     const seconds=Math.floor((Date.now()-started)/1000);$('#presenter-timer').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
   }
-  $('#presenter-timer').addEventListener('click',()=>{started=Date.now();clock();});
-  $('#presenter-timer').addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();started=Date.now();clock();}});
+  function resetTimer(){started=Date.now();clock();}
+  $('#presenter-reset-timer').addEventListener('click',resetTimer);
+  // Let the native button handle Enter/Space without triggering slide navigation.
+  $('#presenter-reset-timer').addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' ')event.stopPropagation();});
+  $('#presenter-timer').addEventListener('click',resetTimer);
+  $('#presenter-timer').addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();resetTimer();}});
   clock();setInterval(clock,1000);
   send('ready');
   setInterval(()=>{

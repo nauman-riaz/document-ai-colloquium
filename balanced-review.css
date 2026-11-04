@@ -18,3 +18,16 @@
 .scribe-summary-bridge{position:absolute;left:90px;right:90px;top:700px;border-top:1px solid var(--rule);padding-top:13px;font-family:ColloquiumSerif;font-size:30px}.scribe-summary-bridge em{color:var(--teal);margin-left:25px}
 .method-venue{font-family:ColloquiumSans;font-size:14px;fill:var(--muted);font-weight:400}.forge-method-venue{font-size:17px;fill:var(--muted);font-weight:400}
 .future-forensic-motivation .signature-precedent{font-size:17px;margin-top:13px;color:#b5c7bf}
+
+/* Compact, native MathML remains available offline and shares existing reveals. */
+.reveal .slides #docdjinn-handwriting .aligned-sentence{top:270px}
+.baseline-math-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:46px}
+.baseline-equation{font-size:29px;color:var(--teal);margin-right:20px}
+.diagram-math{height:100%;width:100%;display:flex;align-items:center;justify-content:center;color:var(--accent);line-height:1}
+.attention-equation{font-size:32px}.complexity-equation{font-size:25px}
+.reveal .slides #docforgenet-method .forge-math-key{font-size:16px}
+.reveal .slides #docforgenet-method .forge-scaling-note{font-size:16px}
+.reveal .slides #grid-aligned-forgery .gaf-checks{gap:22px}
+.gaf-boundary-equations{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:10px;color:var(--accent)}
+.boundary-equation{font-size:26px}
+.reveal .slides #grid-aligned-forgery .boundary-equation-key{font-size:16px;line-height:1.3;margin-top:8px}

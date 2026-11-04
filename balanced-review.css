@@ -43,8 +43,8 @@
 .stylus-loss-key{font-size:18px;color:var(--muted);white-space:nowrap}
 
 /* Keep DocDjinn's longer reference quieter without dropping author credit. */
-.reveal .slides section[data-paper="djinn"] .paper-citation .citation-credit{font-size:16px}
-.reveal .slides section[data-paper="djinn"] .paper-citation .citation-publication{font-size:15.5px}
+.reveal .slides section[data-paper="djinn"] .paper-citation .citation-credit{font-size:15px}
+.reveal .slides section[data-paper="djinn"] .paper-citation .citation-publication{font-size:14.5px}
 .reveal .slides section[data-paper="djinn"] .paper-citation .equal-credit{font-size:14px}
 
 /* Balance horizontal wordmarks against the unchanged NUST emblem by visual footprint. */

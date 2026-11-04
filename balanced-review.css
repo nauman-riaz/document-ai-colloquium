@@ -35,3 +35,9 @@
 /* Keep full MathML ascenders, descenders and superscripts inside the SVG. */
 .reveal .slides #docforgenet-method .forge-model-diagram{height:400px}
 #docforgenet-method foreignObject{overflow:visible}
+
+/* The training loss shares the final StylusAI reveal and has room for all glyphs. */
+.stylus-loss{position:absolute;top:699px;left:90px;right:235px;min-height:58px;border-top:1px solid var(--rule);padding-top:8px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.stylus-loss-label{font-size:16px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.stylus-loss-equation{font-size:30px;line-height:normal;color:var(--teal);overflow:visible}
+.stylus-loss-key{font-size:18px;color:var(--muted);white-space:nowrap}

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="layout.css?v=publications-overview">
   <link rel="stylesheet" href="closing-sequence.css?v=forensics-funding">
 <link rel="stylesheet" href="audience-mode.css?v=clean-numbers-1"><script src="audience-mode.js?v=clean-numbers-1"></script>
-  <link rel="stylesheet" href="balanced-review.css?v=2026-11-04-math-fit">
+  <link rel="stylesheet" href="balanced-review.css?v=2026-11-04-stylus-loss">
 </head>
 <body>
   <div class="reveal">
@@ -263,6 +263,7 @@
             <text x="615" y="462" text-anchor="middle" class="arch-small">Repeat with xₜ₋₁ and the next timestep · conditions stay fixed</text>
           </g>
         </svg>
+        <div class="stylus-loss fragment" data-fragment-index="3"><span class="stylus-loss-label">Training objective</span><math xmlns="http://www.w3.org/1998/Math/MathML" class="stylus-loss-equation" display="inline" aria-label="The diffusion training loss is the expected squared error between the added noise and the noise predicted from the noisy image, timestep and three conditions."><msub><mi mathvariant="script">L</mi><mtext>diff</mtext></msub><mo>=</mo><mi mathvariant="double-struck">E</mi><mo>[</mo><msubsup><mrow><mo>‖</mo><mi>ε</mi><mo>−</mo><msub><mi>ε</mi><mi>θ</mi></msub><mo>(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>,</mo><mi>t</mi><mo>,</mo><mi>c</mi><mo>)</mo><mo>‖</mo></mrow><mn>2</mn><mn>2</mn></msubsup><mo>]</mo></math><span class="stylus-loss-key"><i>c</i>: text + writer style + printed guide</span></div>
         <!-- PAPER CITATION START --><footer class="paper-citation" aria-label="Paper reference"><div class="citation-credit"><span class="citation-authors"><span class="author-name"><strong>Nauman Riaz</strong></span>, <span class="author-name">Saifullah Saifullah</span>, <span class="author-name">Stefan Agne</span>, <span class="author-name">Andreas Dengel</span>, <span class="author-name">Sheraz Ahmed</span>.</span><span class="citation-publication">“StylusAI: Stylistic Adaptation for Robust German Handwritten Text Generation.” <cite>Proc. ICDAR</cite>, 2024.</span></div><a class="paper-qr" href="https://link.springer.com/chapter/10.1007/978-3-031-70536-6_26" target="_blank" rel="noopener" aria-label="Paper: StylusAI: Stylistic Adaptation for Robust German Handwritten Text Generation"><img src="assets/qr/stylus.svg" alt="Scan to open the paper" width="116" height="116"><span>Paper</span></a></footer><!-- PAPER CITATION END -->
         <aside class="notes">
           <div data-note-step="0">
@@ -291,8 +292,8 @@
           </div>
           <div data-note-step="4">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 06 · Reveal 4/4</p>
-          <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the update loop — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The network predicts noise, which the sampler uses to update the image. We keep the text, writer style, and printed guide fixed while repeating those denoising steps.</p>
+          <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the update loop and training objective — not spoken]</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">During training, we minimise the difference between the noise we added and the noise the network predicts. At generation time, the sampler uses these predictions to remove noise step by step, keeping all three conditions fixed.</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Advance to the evidence — not spoken]</p>
           <p class="note-speech" style="margin:.25em 0 .75em">Here is what this lets us generate.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>stylus method: latex_projects/StylusAI__Stylistic_Adaptation_for_Robust_German_Handwritten_Text_Generation__1_/main.tex; stylus conditioning: latex_projects/StylusAI__Stylistic_Adaptation_for_Robust_German_Handwritten_Text_Generation__1_/main.tex; stylus diffusion: latex_projects/StylusAI__Stylistic_Adaptation_for_Robust_German_Handwritten_Text_Generation__1_/main.tex; First colloquium: /home/riaz/Downloads/1st_phd_colloquium_nauman_riaz.pptx.pdf, PDF pages 9–20; 26</p><p><strong>Figure context — not spoken:</strong> Generation schematic · No intermediate model samples shown. Original diagram</p><p><a href="assets/stylusai-model-original.pdf" target="_blank" rel="noopener">Original diagram</a></p></details>

@@ -47,9 +47,9 @@
 .reveal .slides section[data-paper="djinn"] .paper-citation .citation-publication{font-size:15.5px}
 .reveal .slides section[data-paper="djinn"] .paper-citation .equal-credit{font-size:14px}
 
-/* Scale the DocDjinn support logos together, preserving their visual balance. */
-.reveal .slides #docdjinn-generation .deepreader-logo{width:161.5px;height:43.35px}
-.reveal .slides #docdjinn-generation .deepreader-logo img{width:190.91px;height:78.0725px;left:-14.9345px;top:-17.6885px}
-.reveal .slides #docdjinn-generation .insiders-logo{width:161.5px}
+/* Balance horizontal wordmarks against the unchanged NUST emblem by visual footprint. */
+.reveal .slides #docdjinn-generation .deepreader-logo{width:96px;height:25.7684px}
+.reveal .slides #docdjinn-generation .deepreader-logo img{width:113.4821px;height:46.4084px;left:-8.8775px;top:-10.5145px}
+.reveal .slides #docdjinn-generation .insiders-logo{width:105px}
 .reveal .slides #docdjinn-generation .nust-logo{width:52.7px}
-.reveal .slides #docdjinn-generation .rheinmain-logo{width:151.3px}
+.reveal .slides #docdjinn-generation .rheinmain-logo{width:100px}

@@ -145,19 +145,19 @@
           <div data-note-step="0">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 04 · Reveal 0/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[On arrival · highlight the unchanged amount field — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">A model could read an amount correctly and reconstruct the table around it perfectly, without noticing that someone had changed the amount. Correct reading doesn’t establish whether the document has been altered.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">A model could read a changed amount and reconstruct its table perfectly without noticing the edit.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Motivating example only · No manipulation or detector prediction is claimed.</p></details>
           </div>
           <div data-note-step="1">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 04 · Reveal 1/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the question about forensic evidence — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">Detecting that change requires evidence of an edit. And when a detector flags a region, we need to ask what it found. Is it responding to the alteration, or to an image pattern that happens to occur alongside edits?</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">When a detector flags a region, is it responding to the edit, or to an image pattern that happens to accompany it?</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Motivating example only · No manipulation or detector prediction is claimed.</p></details>
           </div>
           <div data-note-step="2">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 04 · Reveal 2/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the two stream labels — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">So one part of my research asks how we can generate documents and recover their structure. The other asks how we can detect changes and whether we can trust the detector.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">That gives us two questions: how do we generate documents and recover their structure, and how do we detect changes reliably?</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Advance to the first-colloquium recap — not spoken]</p>
           <p class="note-speech" style="margin:.25em 0 .75em">My starting point was handwriting.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Motivating example only · No manipulation or detector prediction is claimed.</p></details>
@@ -457,25 +457,25 @@
           <div data-note-step="0">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 10 · Reveal 0/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[On arrival · place handwriting within the document — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">Generating a word is one problem. Fitting handwriting naturally into a document is another. The HTML specifies each entry’s text, region and writer identifier. Entries with the same identifier receive a consistent handwriting style.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">The HTML specifies each entry’s text, region and writer ID. Using the same ID keeps the handwriting style consistent across the page.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>djinn method: latex_projects/IJDAR_DocDjinn/sec/3_methdology.tex</p><p><strong>Figure context — not spoken:</strong> Original word and line outputs · Placement into the form is schematic. The handwriting sentence and the anchor form are separate examples.</p></details>
           </div>
           <div data-note-step="1">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 10 · Reveal 1/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal generated word segments — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">Here are word images from our IAM-trained latent diffusion model. It denoises a compressed image representation, conditioned on the text and writer style. Notice that the words don’t initially sit on the same line.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">Our IAM-trained latent diffusion model generates words by denoising a compressed representation, conditioned on text and writer style. Their baselines initially differ.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>djinn method: latex_projects/IJDAR_DocDjinn/sec/3_methdology.tex</p><p><strong>Figure context — not spoken:</strong> Original word and line outputs · Placement into the form is schematic. The handwriting sentence and the anchor form are separate examples.</p></details>
           </div>
           <div data-note-step="2">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 10 · Reveal 2/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal baseline-aligned composition — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">For each word, we find the lowest ink pixel in each occupied column and take the median of those positions. This estimates the writing baseline while reducing the influence of descenders—the lower parts of letters such as g and y. We align the words using these baselines.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">For each word, we take the median of the lowest ink positions in its occupied columns. This reduces the influence of descenders, like the lower parts of g and y. We then align the word baselines.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>djinn method: latex_projects/IJDAR_DocDjinn/sec/3_methdology.tex</p><p><strong>Figure context — not spoken:</strong> Original word and line outputs · Placement into the form is schematic. The handwriting sentence and the anchor form are separate examples.</p></details>
           </div>
           <div data-note-step="3">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 10 · Reveal 3/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal placement and retained supervision — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">We then fit the line into its field and retain its text and location as annotations. We now have pages containing both printed and handwritten text, together with their labels.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">We fit the aligned line into its field, retaining its text and location as labels.</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Advance to learning evidence — not spoken]</p>
           <p class="note-speech" style="margin:.25em 0 .75em">The next question is whether training on these synthetic pages helps a model perform better on real documents.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>djinn method: latex_projects/IJDAR_DocDjinn/sec/3_methdology.tex</p><p><strong>Figure context — not spoken:</strong> Original word and line outputs · Placement into the form is schematic. The handwriting sentence and the anchor form are separate examples.</p></details>
@@ -707,26 +707,26 @@
           <div data-note-step="0">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 17 · Reveal 0/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[On arrival · RGB and convolutional stream — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">DocForgeNet processes two views of the same image. The CNN branch captures local visual details, which matter when an edit affects only a few characters.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">DocForgeNet’s CNN branch captures local visual details, including edits that affect only a few characters.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex</p><p><strong>Figure context — not spoken:</strong> Schematic RGB–CNN / DCT–transformer configuration · Grids are illustrative, not measured coefficients. Original diagram</p><p><a href="assets/docforge-architecture-source.pdf" target="_blank" rel="noopener">Original diagram</a></p></details>
           </div>
           <div data-note-step="1">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 17 · Reveal 1/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the JPEG frequency stream — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The JPEG branch combines luminance DCT coefficients—frequency information from the brightness channel—with the quantization table to build features for eight-by-eight blocks. A transformer connects information across those blocks. Standard attention compares every pair of feature positions, giving quadratic cost. Linear attention combines keys and values first, avoiding the full pairwise matrix. For a fixed feature size, its attention cost grows linearly with the number of positions.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">The JPEG branch combines luminance DCT coefficients from the brightness channel with the quantization table to form eight-by-eight block features. A transformer connects these positions. Standard attention has quadratic cost; linear attention combines keys and values first, avoiding the full pairwise matrix. For fixed feature dimensions, its attention cost grows linearly with the number of positions.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex</p><p><strong>Figure context — not spoken:</strong> Schematic RGB–CNN / DCT–transformer configuration · Grids are illustrative, not measured coefficients. Original diagram</p><p><a href="assets/docforge-architecture-source.pdf" target="_blank" rel="noopener">Original diagram</a></p></details>
           </div>
           <div data-note-step="2">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 17 · Reveal 2/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal cross-stream exchange at all three stages — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The two branches exchange information at three stages through cross-linear attention. Queries come from one branch and keys and values from the other, then we reverse the direction. Each branch can use what the other has learned.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">The branches exchange information at three stages through cross-linear attention. Queries come from one stream, keys and values from the other, then we reverse the direction.</p>
           <p style="font-size:.7em;color:#52665e;margin:.25em 0">[Pause for the visual — not spoken]</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex</p><p><strong>Figure context — not spoken:</strong> Schematic RGB–CNN / DCT–transformer configuration · Grids are illustrative, not measured coefficients. Original diagram</p><p><a href="assets/docforge-architecture-source.pdf" target="_blank" rel="noopener">Original diagram</a></p></details>
           </div>
           <div data-note-step="3">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 17 · Reveal 3/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal the decoder and supervision — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The decoder combines features at different scales and predicts a tampering score for each pixel. We train with pixel-level masks, using cross-entropy and Lovász loss. The frequency head and decoder build on DTD, introduced at CVPR 2023. Our main addition is the repeated exchange of information between the two streams.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">The multi-scale decoder predicts a tampering score for each pixel. We train with mask supervision, cross-entropy and Lovász loss. The frequency head and decoder build on DTD from CVPR 2023; repeated cross-stream exchange is our main addition.</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Advance to original-study results — not spoken]</p>
           <p class="note-speech" style="margin:.25em 0 .75em">Here is how that design performs on DocTamper.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>forge method: latex_projects/DocForgeNet__Dual_Cross_Stream_Fusion_Network_for_Robust_Forgery_Detection_in_Scanned_Documents/main.tex</p><p><strong>Figure context — not spoken:</strong> Schematic RGB–CNN / DCT–transformer configuration · Grids are illustrative, not measured coefficients. Original diagram</p><p><a href="assets/docforge-architecture-source.pdf" target="_blank" rel="noopener">Original diagram</a></p></details>
@@ -934,27 +934,27 @@
           <div data-note-step="0">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 23 · Reveal 0/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[On arrival · establish the baseline input — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">PRC stands for Pad–Recompress–Crop. We apply it to an already-forged document without adding another text edit. The aim is to change which pixels share JPEG blocks while keeping the content in place.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">PRC stands for Pad–Recompress–Crop. It shifts JPEG block alignment in an already-forged document without adding another text edit.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg prc: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg protocol: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> PRC protocol · Fixed shift (4, 4) · 1–3 recompressions · JPEG quality ≥75.</p></details>
           </div>
           <div data-note-step="1">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 23 · Reveal 1/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal padding — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">We add four pixels at the top and left by repeating the nearest edge pixels. This shifts the document by half a JPEG block. We use this fixed shift throughout the experiment.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">We repeat the edge pixels to add four pixels at the top and left: a fixed half-block shift.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg prc: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg protocol: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> PRC protocol · Fixed shift (4, 4) · 1–3 recompressions · JPEG quality ≥75.</p></details>
           </div>
           <div data-note-step="2">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 23 · Reveal 2/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal recompression — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">We then recompress the padded image using the same JPEG settings as the baseline. Compression now works on the blocks in this shifted canvas.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">We recompress with the same JPEG settings as the baseline, now on the shifted grid.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg prc: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg protocol: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> PRC protocol · Fixed shift (4, 4) · 1–3 recompressions · JPEG quality ≥75.</p></details>
           </div>
           <div data-note-step="3">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 23 · Reveal 3/3</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Reveal cropping back — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">Finally, we decode the image and crop it back to its original size. We do not recompress it again after cropping.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">Then we decode and crop back to the original size, without another recompression.</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Explain what stays in place and what can change — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The text and layout return to their original positions, but the compression grid has shifted.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">The text and layout return to their original positions, but the compression grid stays shifted.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg prc: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg protocol: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex; jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> PRC protocol · Fixed shift (4, 4) · 1–3 recompressions · JPEG quality ≥75.</p></details>
           </div>
         </aside>
@@ -1042,21 +1042,21 @@
           <div data-note-step="0">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 26 · Reveal 0/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[On arrival · recall GAF — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">The two tests reveal different problems. With GAF, an actual edit can go undetected when we align it with the JPEG grid.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">With GAF, aligning an edit to the JPEG grid can make the detector miss it.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Controlled interventions, not perfect cue isolation · Strong benchmark scores do not establish robustness to these changes. PRC can change RGB values; GAF may slightly expand boundaries. The tests support sensitivity to grid alignment, not perfect isolation of all other cues.</p></details>
           </div>
           <div data-note-step="1">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 26 · Reveal 1/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Click 1 · contrast PRC — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">With PRC, shifting the compression grid can make a detector flag regions that were not edited. This is especially pronounced for DTD and DocForgeNet. The strength and direction of the effect depend on the model.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">PRC can do the opposite: shifting the grid makes some detectors flag regions that were not edited.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Controlled interventions, not perfect cue isolation · Strong benchmark scores do not establish robustness to these changes. PRC can change RGB values; GAF may slightly expand boundaries. The tests support sensitivity to grid alignment, not perfect isolation of all other cues.</p></details>
           </div>
           <div data-note-step="2">
           <p class="note-position" style="font-size:.7em;color:#52665e;margin:0 0 .7em">Slide 26 · Reveal 2/2</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Click 2 · state the limits — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">Across these controlled JPEG experiments, grid alignment changes what the models detect. The size and direction of the effect depend on the model.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">These controlled JPEG tests show grid sensitivity, with different effects across models.</p>
           <p class="note-cue" style="font-size:.7em;color:#52665e;margin:1em 0 .25em">[Connect the findings to the research programme — not spoken]</p>
-          <p class="note-speech" style="margin:.25em 0 .75em">A strong benchmark score is not enough. We also need to test whether the prediction holds up when the image conditions change.</p>
+          <p class="note-speech" style="margin:.25em 0 .75em">A benchmark score alone is not enough; the prediction also needs to hold up when image conditions change.</p>
           <details style="font-size:.65em;color:#66736c"><summary>Source references — not spoken</summary><p>jpeg scope: latex_projects/Mistaking Periodicity for Manipulation_ JPEG-Induced Structural Bias in Document Tampering Detection/paper.tex</p><p><strong>Figure context — not spoken:</strong> Controlled interventions, not perfect cue isolation · Strong benchmark scores do not establish robustness to these changes. PRC can change RGB values; GAF may slightly expand boundaries. The tests support sensitivity to grid alignment, not perfect isolation of all other cues.</p></details>
           </div>
         </aside>
